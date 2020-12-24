@@ -1,0 +1,271 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 12px rgba(15, 13, 13, 0.1);
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 12px rgba(12, 11, 11, 0.2);
+}
+.main {
+	background-image: url('https://previews.123rf.com/images/sdecoret/sdecoret1709/sdecoret170901569/86528646-businessman-on-blurred-background-chatting-with-chatbot-application-3d-rendering.jpg');
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+}
+.main .message-board {
+	position: absolute;
+	background-color: white;
+	width: 900px;
+	height: 600px;
+	top: 50px;
+	left: 100px;
+	border-radius: 10px;
+}
+.main .message-board .status-room {
+	height: 10%;
+	background-color: rgb(81 81 195);
+	display: flex;
+	text-align: center;
+	font-size: 12px;
+	width: 100%;
+	color: white;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+i.fas.fa-dot-circle {
+	color: #22e122;
+	background-color: #22e122;
+	border-radius: 50%;
+}
+.main .message-board .status-room .user-name {
+	width: 33%;
+	margin-top: 15px;
+}
+.main .message-board .status-room .user-name p.user {
+	display: inline-block;
+	margin-left: 6px;
+	font-size: 18px;
+	font-weight: 800;
+}
+.main .message-board .status-room .room-name {
+	width: 33%;
+}
+.main .message-board .status-room .room-name p {
+	font-size: 17px;
+	display: inline-block;
+	margin-top: 16px;
+	color: #fff1f1;
+	font-weight: 600;
+	text-align: center;
+	margin-left: 5%;
+}
+.main .message-board .status-room .participant {
+	width: 20%;
+}
+.main .message-board .status-room .participant p {
+	margin-top: 5%;
+	font-size: 27px;
+}
+.main .message-board .status-room .button-close {
+	display: inline-block;
+	width: 33%;
+}
+.main .message-board .status-room .button-close .close-btn {
+	float: right;
+	margin-top: 5%;
+	background-color: rgb(81 81 201);
+	border: 0px solid gray;
+	font-size: 25px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.main .message-board .messagebox {
+	height: 80%;
+	background-color: #ffffff;
+	/* position: relative; */
+	overflow-y: scroll;
+}
+.main .message-board .messagebox .message-show-here {
+	/* position: absolute; */
+	list-style: none;
+	width: 100%;
+}
+.main .message-board .messagebox .message-show-here .message {
+	/* width: 40%;
+	border-radius: 4px;
+	height: 5%;
+	margin-top: 20px; */
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.main .message-board .messagebox .message-show-here .message .content {
+}
+
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.another-person-mes
+	.content {
+	background-color: rgb(236 224 224);
+	border-radius: 16px;
+	display: inline-block;
+	width: auto;
+	max-width: 60%;
+	overflow-wrap: anywhere;
+}
+.main .message-board .messagebox .message-show-here .your-mes {
+	width: 60%;
+	display: inline-block;
+	float: right;
+}
+
+.main .message-board .messagebox .message-show-here .your-mes h4.name {
+	font-size: 15px;
+	color: #000000;
+}
+.main .message-board .messagebox .message-show-here .your-mes .content {
+	background-color: blue;
+	color: white;
+	border-radius: 16px;
+	width: auto;
+	display: inline-block;
+	max-width: 60%;
+	overflow-wrap: anywhere;
+}
+
+.main .message-board .messagebox .message-show-here .another-person-mes {
+	width: 60%;
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+}
+
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.another-person-mes
+	h4.name {
+	font-size: 15px;
+	color: rgb(102, 83, 83);
+}
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.another-person-mes
+	.content
+	p.text {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.main .message-board .messagebox .message-show-here .your-mes {
+	text-align: right;
+	margin-right: 15px;
+}
+.main .message-board .messagebox .message-show-here .your-mes i {
+	color: gray;
+	margin-right: 15px;
+	/* display: inline-block; */
+	cursor: pointer;
+	visibility: hidden;
+}
+.main .message-board .messagebox .message-show-here .your-mes:hover i {
+	visibility: visible;
+	transition: 0.3;
+}
+.main .message-board .messagebox .message-show-here .your-mes .content h4.name {
+	width: 30%;
+	font-size: 12px;
+	padding: 5px;
+	color: black;
+}
+.main .message-board .messagebox .message-show-here .your-mes .content p.text {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.main .message-board .messagebox .message-show-here .your-mes p.your-text-date {
+	color: gray;
+	font-size: 12px;
+	margin-top: 6px;
+	margin-right: 3px;
+}
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.another-person-mes
+	p.another-text-date {
+	color: gray;
+	font-size: 12px;
+	margin-top: 6px;
+	margin-left: 3px;
+}
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.another-person-mes
+	.content
+	h4.name
+	p.another-text-date {
+	font-size: 8px;
+	margin-top: 34px;
+}
+
+input.textmes {
+	height: 49px;
+	width: 80%;
+	margin-left: 10px;
+	margin-top: 0px;
+	border: 1px solid white;
+}
+
+input.textmes:hover {
+	border: none;
+}
+input.textmes:focus {
+	outline: none;
+}
+
+input.textmes {
+}
+
+button.btn-enter {
+	font-size: 30px;
+	border: none;
+	display: inline-block;
+	/* text-align: right; */
+	float: right;
+	margin-right: 33px;
+	cursor: pointer;
+	margin-top: 8px;
+}
+button.btn-enter i {
+	background-color: white;
+}
+button.btn-enter:hover {
+	background-color: white;
+	color: black;
+	outline: none;
+	transition: 0.8s;
+	font-size: 40px;
+	transform: rotate(400deg);
+}
+button.btn-enter:focus {
+	outline: none;
+}
