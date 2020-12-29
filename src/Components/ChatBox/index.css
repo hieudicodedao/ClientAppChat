@@ -27,7 +27,7 @@
 	position: absolute;
 	background-color: white;
 	width: 900px;
-	height: 600px;
+	height: 80vh;
 	top: 50px;
 	left: 100px;
 	border-radius: 10px;
@@ -57,6 +57,7 @@ i.fas.fa-dot-circle {
 	margin-left: 6px;
 	font-size: 18px;
 	font-weight: 800;
+	color: white;
 }
 .main .message-board .status-room .room-name {
 	width: 33%;
@@ -109,7 +110,17 @@ i.fas.fa-dot-circle {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.main .message-board .messagebox .message-show-here .message .content {
+.main
+	.message-board
+	.messagebox
+	.message-show-here
+	.message
+	.content
+	p.deleted {
+	padding: 10px;
+	font-size: 12px;
+	font-weight: 20;
+	color: #b4b0b0;
 }
 
 .main
@@ -170,6 +181,7 @@ i.fas.fa-dot-circle {
 	p.text {
 	font-size: 20px;
 	padding: 10px;
+	color: black;
 }
 
 .main .message-board .messagebox .message-show-here .your-mes {
@@ -196,6 +208,7 @@ i.fas.fa-dot-circle {
 .main .message-board .messagebox .message-show-here .your-mes .content p.text {
 	font-size: 20px;
 	padding: 10px;
+	color: white;
 }
 
 .main .message-board .messagebox .message-show-here .your-mes p.your-text-date {
@@ -228,7 +241,7 @@ i.fas.fa-dot-circle {
 }
 
 input.textmes {
-	height: 49px;
+	height: auto;
 	width: 80%;
 	margin-left: 10px;
 	margin-top: 0px;
@@ -263,7 +276,7 @@ button.btn-enter:hover {
 	color: black;
 	outline: none;
 	transition: 0.8s;
-	font-size: 40px;
+	font-size: 30px;
 	transform: rotate(400deg);
 }
 button.btn-enter:focus {

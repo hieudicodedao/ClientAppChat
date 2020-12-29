@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 const Index = (props) => {
-	const { message, username, index, handleDelete } = props
+	const { message, username, handleDelete } = props
 	const [sentTime, setSentTime] = useState('')
+
 	const checkTime = () => {
 		let [day, month, year] = new Date()
 			.toLocaleDateString('en-GB')
 			.split('/')
-		let [hour, minute, second] = new Date()
-			.toLocaleTimeString('en-GB')
-			.split(/:| /)
+		let [hour, minute] = new Date().toLocaleTimeString('en-GB').split(/:| /)
 		let { date } = message
 		if (
 			parseInt(date.y) === parseInt(year) &&
@@ -42,36 +41,45 @@ const Index = (props) => {
 		)
 	}
 	useEffect(() => {
-		const { date } = message
 		checkTime()
 		setInterval(checkTime, 30000)
 		return () => {
 			clearInterval()
 		}
-	}, [])
+	})
 	return (
 		<>
 			{message.username === username ? (
-				<li class='your-mes message'>
-					<i
-						class='far fa-trash-alt'
-						onClick={() => handleDelete(index, message)}
-					></i>
-					<div class='content'>
-						<p class='text deleted'>{message.text}</p>
+				<li className='your-mes message'>
+					{!message.isDelete ? (
+						<i
+							className='far fa-trash-alt'
+							onClick={() => handleDelete(message)}
+						></i>
+					) : null}
+					<div className='content'>
+						{message.isDelete ? (
+							<p className=' deleted'>{message.text}</p>
+						) : (
+							<p className='text'>{message.text}</p>
+						)}
 					</div>
-					<p class='your-text-date'>Sent : {sentTime} </p>
+					<p className='your-text-date'>Sent : {sentTime} </p>
 				</li>
 			) : (
-				<li class='another-person-mes message'>
+				<li className='another-person-mes message'>
 					<div className='name-text-date'>
-						<h4 class='name'>{message.username}</h4>
+						<h4 className='name'>{message.username}</h4>
 					</div>
 
-					<div class='content'>
-						<p class='text'>{message.text}</p>
+					<div className='content'>
+						{message.isDelete ? (
+							<p className='deleted'>{message.text}</p>
+						) : (
+							<p className='text'>{message.text}</p>
+						)}
 					</div>
-					<p class='another-text-date'>Sent : {sentTime} </p>
+					<p className='another-text-date'>Sent : {sentTime} </p>
 				</li>
 			)}
 		</>

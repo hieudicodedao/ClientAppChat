@@ -27,20 +27,20 @@ const Index = (props) => {
 		setMsg('')
 	}
 	return (
-		<div class='textmes-btn'>
+		<div className='textmes-btn'>
 			<form action=''>
 				<input
 					type='text'
-					class='textmes'
+					className='textmes'
 					placeholder='Your message here ...'
 					name='msg'
 					value={msg}
 					id='msg'
 					onChange={(e) => handleChange(e)}
 				/>
-				<button class='btn-enter' onClick={(e) => handleSubmit(e)}>
+				<button className='btn-enter' onClick={(e) => handleSubmit(e)}>
 					{/* Send */}
-					<i class='fas fa-paper-plane'></i>
+					<i className='fas fa-paper-plane'></i>
 				</button>
 			</form>
 		</div>
